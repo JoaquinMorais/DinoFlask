@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaurio</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    
+
+</head>
+<body>
+
+    <div id="board">   
+        <div id="fondo" class="fondo">
+            <img src="{{ url_for('static',filename='src/fondo.png') }}" alt="fondo" id="f1">
+        </div>
+        <div id="fondo2" class="fondo" style="left: 100%;">
+            <img src="{{ url_for('static',filename='src/fondo.png') }}" alt="fondo" id="f2">
+        </div>
+        <div id="scoreContainer">
+            Distancia: <span id="score">0</span>
+            <p></p>
+            Record: <span id="record">0</span>
+        </div>
+        <div id="player">
+            <img src="{{ url_for('static',filename='src/dinosaurio1.png') }}" alt="player dino" id="dino">
+        </div>
+        <div id="cactus" class="cactus cactusMove">
+            <img src="{{ url_for('static',filename='src/cactus.png') }}" alt="cactus">
+        </div>
+        <div class="game-over">GAME OVER</div>
+    </div>
+    <div class="boton-main">
+        <button id="buttonPlayStop" class="button"></button>
+        <button id="buttonRestart">Restart Game</button>
+    </div>
+
+    
+
+    <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+*{
+    margin: 0px;
+    --distancia: 0;
+}
+
+#board{
+    background-color: blue;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+
+}
+#player{
+    border: red solid 1px;/**/
+    width: auto;
+    height: 70px;
+    position: absolute;
+    bottom: 240px;
+    left: 13%;
+    
+}
+#player img{
+    width: 100%;
+    height: 100%;
+    
+}
+.fondo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.fondo img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: backgroundMove 2s linear infinite;
+}
+.cactus{
+    /*border: rgb(0, 0, 0) solid 1px;*/
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    bottom: 240px;
+    right: 0%;
+    
+}
+.cactus img{
+    max-width: 100%;
+    max-height: 100%;
+}
+#scoreContainer{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: sans-serif;
+}
+
+
+
+.game-over{
+    display: none;
+
+    position: absolute;
+    width: 100%;
+
+    top: 150px;
+    text-align: center;
+    color: #7e928b;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: 700;
+}
+
+
+/* BOTON */
+.boton-main{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    
+}
+.button.play {
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+  }
+  
+  .button {
+    border: 0;
+    font-size: 40px;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+    border-color: transparent transparent transparent #202020;
+    transition: 500ms all ease;
+    cursor: pointer;
+    border-style: double;
+    border-width: 0px 0 0px 60px;
+  }
+  
+  .button:hover {
+    border-color: transparent transparent transparent #404040;
+  }
+
+
+
+/* ANIMACIONES */ 
+.playerJump{
+    animation: playerJump 0.7s linear;
+}
+.cactusMove{
+    animation: cactusMove 2s linear infinite;
+}
+.gameOver{
+    animation: gameOver 1s ease-out;
+}
+
+@keyframes playerJump{
+    
+    10%{
+        bottom: 280px;
+    }
+    20%{
+        bottom: 310px;
+    }
+    30%{
+        bottom: 330px;
+    }
+    40%{
+        bottom: 345px;
+    }
+    50%{
+        bottom: 350px;
+    }
+    60%{
+        bottom: 345px;
+    }
+    70%{
+        bottom: 330px;
+    }
+    80%{
+        bottom: 310px;
+    }
+    90%{
+        bottom: 280px;
+    }
+       
+    
+}
+
+@keyframes backgroundMove{
+    0%{
+        right: 0%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+@keyframes cactusMove{
+    0%{
+        right: 0%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+@keyframes gameOver{
+    0%{
+        top: -30px;
+    }
+    100%{
+        top: 150px;
+    }
+}
+
